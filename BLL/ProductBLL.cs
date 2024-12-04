@@ -15,6 +15,11 @@ namespace BLL
         {
             return productDAL.getProduct();
         }
+        public List<chitietsanpham> GetChitietsanphams()
+        {
+            return productDAL.GetChitietsanphams();
+        }
+
         public bool deleteProduct(int id)
         {
             return productDAL.deleteProduct(id);
@@ -30,5 +35,20 @@ namespace BLL
                 return true;
             return false;
         }
+        public List<chitietsanpham> ShowProductDetailByID(int masp)
+        {
+            return productDAL.ShowProductDetail()
+                             .Where(m => m.MaSP == masp)
+                             .Select(m => new chitietsanpham
+                             {
+                                 MaChiTiet = m.MaChiTiet,
+                                 MaSP = m.MaSP,
+                                 MaKichThuoc = m.MaKichThuoc,
+                                 MaMau = m.MaMau,
+                                 SoLuongTon = m.SoLuongTon
+                             })
+                             .ToList(); 
+        }
+
     }
 }

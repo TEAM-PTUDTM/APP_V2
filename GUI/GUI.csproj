@@ -123,6 +123,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLSHOPDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSHOPDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CategoryGUI\FormCategoryType.resx">
       <DependentUpon>FormCategoryType.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +177,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLSHOPDataSet.xsc">
+      <DependentUpon>QLSHOPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLSHOPDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSHOPDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSHOPDataSet.xss">
+      <DependentUpon>QLSHOPDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -17,6 +17,10 @@ namespace DAL
         {
             return sql.sanphams.Select(pro => pro).ToList<sanpham>();
         }
+        public List<chitietsanpham> GetChitietsanphams()
+        {
+            return sql.chitietsanphams.Select(pro => pro).ToList<chitietsanpham>();
+        }
         public sanpham findByIdProduct(int id)
         {
             return sql.sanphams.Where(pro => pro.MaSP == id).FirstOrDefault();
@@ -68,6 +72,13 @@ namespace DAL
             {
                 return false;
             }
+        }
+
+
+        // hàm này sai hã
+        public List<chitietsanpham> ShowProductDetail()
+        {
+            return sql.chitietsanphams.ToList();
         }
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BLL;
 using DTO;
 using component;
+using System.Web.UI.WebControls;
 
 namespace GUI.ProductGUI
 {
@@ -19,51 +20,42 @@ namespace GUI.ProductGUI
         public FormProductList()
         {
             InitializeComponent();
+            dgv_Product.DataSource = productBLL.getProduct();
+            dgv_Product.SelectionChanged += Dgv_Product_SelectionChanged;
+            dgv_Product.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+          
         }
 
         private void FormProductList_Load(object sender, EventArgs e)
         {
-            panel_Products.AutoScroll = true;
+           
 
-            List<sanpham> products = productBLL.getProduct();
-
-            int xOffset = 0; 
-            int yOffset = 0; 
-            int itemWidth = 269; 
-            int itemHeight = 85; 
-            int spacing = 2; 
-
-            panel_Products.SuspendLayout();
-            foreach (var product in products)
+          
+            
+        }
+        private void Dgv_Product_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgv_Product.SelectedRows.Count > 0)
             {
-                UC_ProductCart productItem = new UC_ProductCart
-                {
-                    MaSP = product.MaSP,
-                    TenSP = product.TenSP,
-                    Gia = (decimal)product.Gia,
-                    Sale = (decimal)product.PhanTramGiamGia,
-                    Size = new System.Drawing.Size(itemWidth, itemHeight), 
-                };
+                DataGridViewRow sl = dgv_Product.SelectedRows[0];
+                string masp = sl.Cells["MaSP"].Value.ToString();
 
-
-                //var image = imageService.GetFirstImageByMaSP(product.MaSP);
-
-                //if (image != null)
-                //{
-                //    productItem.HinhAnh = image.Url_Img;
-                //}
-
-                if (xOffset + itemWidth > panel_Products.Width)
-                {
-                    xOffset = 0;
-                    yOffset += itemHeight + spacing; 
-                }
-                productItem.Location = new Point(xOffset, yOffset);
-                xOffset += itemWidth + spacing;
-                panel_Products.Controls.Add(productItem);
+                //dgv_DetailProduct.DataSource = productBLL.GetChitietsanphams().Where(m=>m.MaSP==int.Parse(masp)).ToList<chitietsanpham>();
+                dgv_DetailProduct.DataSource = productBLL.ShowProductDetailByID(int.Parse(masp));
+                // Ẩn các cột theo chỉ số (nếu có)
+                dgv_DetailProduct.Columns[7].Visible = false; // Cột kichthu
+                dgv_DetailProduct.Columns[5].Visible = false; // Cột mausac
+                dgv_DetailProduct.Columns[6].Visible = false; // Cột sanpha
             }
+        }
 
-            panel_Products.ResumeLayout();
+        private void dgv_Product_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgv_DetailProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
