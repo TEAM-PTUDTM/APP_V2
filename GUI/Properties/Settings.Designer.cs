@@ -33,5 +33,16 @@ namespace GUI.Properties {
                 return ((string)(this["QLSHOPConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NGUYENVANVUONG;Initial Catalog=QLSHOP;User ID=sa;Password=123456;Encr" +
+            "ypt=True;TrustServerCertificate=True")]
+        public string QLSHOPConnectionString1 {
+            get {
+                return ((string)(this["QLSHOPConnectionString1"]));
+            }
+        }
     }
 }

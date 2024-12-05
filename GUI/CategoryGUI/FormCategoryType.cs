@@ -16,5 +16,20 @@ namespace GUI.CategoryGUI
         {
             InitializeComponent();
         }
+
+        private void FormCategoryType_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'sHOP.danhmuc' table. You can move, or remove it, as needed.
+            this.danhmucTableAdapter.Fill(this.sHOP.danhmuc);
+
+        }
+
+        private void danhmucBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.danhmucBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.sHOP);
+
+        }
     }
 }

@@ -16,5 +16,20 @@ namespace GUI.CategoryGUI
         {
             InitializeComponent();
         }
+
+        private void FormCategory_Size_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'sHOP.mausac' table. You can move, or remove it, as needed.
+            this.mausacTableAdapter.Fill(this.sHOP.mausac);
+
+        }
+
+        private void mausacBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.mausacBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.sHOP);
+
+        }
     }
 }

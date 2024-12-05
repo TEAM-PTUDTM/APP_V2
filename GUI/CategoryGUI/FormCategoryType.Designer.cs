@@ -28,310 +28,345 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCategoryType));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.textBox_Search = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.DataGridView_Data = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox_MaDanhMuc = new Guna.UI2.WinForms.Guna2TextBox();
-            this.textBox_TenDanhMuc = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label_TenDanhMuc = new System.Windows.Forms.Label();
-            this.label_MaDanhMuc = new System.Windows.Forms.Label();
-            this.btn_save = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_delete = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_update = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_create = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ShadowPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView_Data)).BeginInit();
-            this.panel1.SuspendLayout();
+            System.Windows.Forms.Label maDanhMucLabel;
+            System.Windows.Forms.Label tenDanhMucLabel;
+            this.sHOP = new GUI.SHOP();
+            this.danhmucBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.danhmucTableAdapter = new GUI.SHOPTableAdapters.danhmucTableAdapter();
+            this.tableAdapterManager = new GUI.SHOPTableAdapters.TableAdapterManager();
+            this.danhmucBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.danhmucBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.danhmucDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maDanhMucTextBox = new System.Windows.Forms.TextBox();
+            this.tenDanhMucTextBox = new System.Windows.Forms.TextBox();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            maDanhMucLabel = new System.Windows.Forms.Label();
+            tenDanhMucLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.sHOP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.danhmucBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.danhmucBindingNavigator)).BeginInit();
+            this.danhmucBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.danhmucDataGridView)).BeginInit();
+            this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox_Search
+            // sHOP
             // 
-            this.textBox_Search.Animated = true;
-            this.textBox_Search.AutoRoundedCorners = true;
-            this.textBox_Search.BorderColor = System.Drawing.Color.Red;
-            this.textBox_Search.BorderRadius = 18;
-            this.textBox_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox_Search.DefaultText = "";
-            this.textBox_Search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBox_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBox_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_Search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textBox_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_Search.IconRight = ((System.Drawing.Image)(resources.GetObject("textBox_Search.IconRight")));
-            this.textBox_Search.Location = new System.Drawing.Point(13, 30);
-            this.textBox_Search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox_Search.Name = "textBox_Search";
-            this.textBox_Search.PasswordChar = '\0';
-            this.textBox_Search.PlaceholderText = "";
-            this.textBox_Search.SelectedText = "";
-            this.textBox_Search.ShadowDecoration.BorderRadius = 30;
-            this.textBox_Search.ShadowDecoration.Color = System.Drawing.Color.IndianRed;
-            this.textBox_Search.Size = new System.Drawing.Size(568, 39);
-            this.textBox_Search.TabIndex = 25;
+            this.sHOP.DataSetName = "SHOP";
+            this.sHOP.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // guna2ShadowPanel1
+            // danhmucBindingSource
             // 
-            this.guna2ShadowPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.guna2ShadowPanel1.Controls.Add(this.DataGridView_Data);
-            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(13, 101);
-            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(568, 489);
-            this.guna2ShadowPanel1.TabIndex = 24;
+            this.danhmucBindingSource.DataMember = "danhmuc";
+            this.danhmucBindingSource.DataSource = this.sHOP;
             // 
-            // DataGridView_Data
+            // danhmucTableAdapter
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.DataGridView_Data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView_Data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridView_Data.ColumnHeadersHeight = 40;
-            this.DataGridView_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridView_Data.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DataGridView_Data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView_Data.Location = new System.Drawing.Point(4, 4);
-            this.DataGridView_Data.Margin = new System.Windows.Forms.Padding(4);
-            this.DataGridView_Data.Name = "DataGridView_Data";
-            this.DataGridView_Data.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DataGridView_Data.RowHeadersVisible = false;
-            this.DataGridView_Data.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
-            this.DataGridView_Data.Size = new System.Drawing.Size(560, 481);
-            this.DataGridView_Data.TabIndex = 0;
-            this.DataGridView_Data.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.DataGridView_Data.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.DataGridView_Data.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.DataGridView_Data.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.DataGridView_Data.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.DataGridView_Data.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.DataGridView_Data.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView_Data.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.DataGridView_Data.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DataGridView_Data.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.DataGridView_Data.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DataGridView_Data.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.DataGridView_Data.ThemeStyle.HeaderStyle.Height = 40;
-            this.DataGridView_Data.ThemeStyle.ReadOnly = false;
-            this.DataGridView_Data.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.DataGridView_Data.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DataGridView_Data.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.DataGridView_Data.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.DataGridView_Data.ThemeStyle.RowsStyle.Height = 22;
-            this.DataGridView_Data.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView_Data.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.danhmucTableAdapter.ClearBeforeFill = true;
             // 
-            // panel1
+            // tableAdapterManager
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.textBox_MaDanhMuc);
-            this.panel1.Controls.Add(this.textBox_TenDanhMuc);
-            this.panel1.Controls.Add(this.label_TenDanhMuc);
-            this.panel1.Controls.Add(this.label_MaDanhMuc);
-            this.panel1.Controls.Add(this.btn_save);
-            this.panel1.Location = new System.Drawing.Point(624, 101);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(579, 489);
-            this.panel1.TabIndex = 23;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.cache_locksTableAdapter = null;
+            this.tableAdapterManager.cacheTableAdapter = null;
+            this.tableAdapterManager.chitietdonhangTableAdapter = null;
+            this.tableAdapterManager.chitietsanphamTableAdapter = null;
+            this.tableAdapterManager.danhmucTableAdapter = this.danhmucTableAdapter;
+            this.tableAdapterManager.donhangTableAdapter = null;
+            this.tableAdapterManager.failed_jobsTableAdapter = null;
+            this.tableAdapterManager.feedbackTableAdapter = null;
+            this.tableAdapterManager.giohangTableAdapter = null;
+            this.tableAdapterManager.hinhanhTableAdapter = null;
+            this.tableAdapterManager.job_batchesTableAdapter = null;
+            this.tableAdapterManager.jobsTableAdapter = null;
+            this.tableAdapterManager.khachhangTableAdapter = null;
+            this.tableAdapterManager.kichthuocTableAdapter = null;
+            this.tableAdapterManager.mausacTableAdapter = null;
+            this.tableAdapterManager.migrationsTableAdapter = null;
+            this.tableAdapterManager.password_reset_tokensTableAdapter = null;
+            this.tableAdapterManager.sanphamTableAdapter = null;
+            this.tableAdapterManager.sessionsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = GUI.SHOPTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usersTableAdapter = null;
+            this.tableAdapterManager.voucher_khachhangTableAdapter = null;
+            this.tableAdapterManager.voucherTableAdapter = null;
             // 
-            // textBox_MaDanhMuc
+            // danhmucBindingNavigator
             // 
-            this.textBox_MaDanhMuc.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox_MaDanhMuc.DefaultText = "";
-            this.textBox_MaDanhMuc.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBox_MaDanhMuc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBox_MaDanhMuc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_MaDanhMuc.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_MaDanhMuc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_MaDanhMuc.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textBox_MaDanhMuc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_MaDanhMuc.Location = new System.Drawing.Point(0, 52);
-            this.textBox_MaDanhMuc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox_MaDanhMuc.Name = "textBox_MaDanhMuc";
-            this.textBox_MaDanhMuc.PasswordChar = '\0';
-            this.textBox_MaDanhMuc.PlaceholderText = "";
-            this.textBox_MaDanhMuc.SelectedText = "";
-            this.textBox_MaDanhMuc.Size = new System.Drawing.Size(579, 39);
-            this.textBox_MaDanhMuc.TabIndex = 4;
+            this.danhmucBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.danhmucBindingNavigator.BindingSource = this.danhmucBindingSource;
+            this.danhmucBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.danhmucBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.danhmucBindingNavigator.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.danhmucBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.danhmucBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.danhmucBindingNavigatorSaveItem,
+            this.bindingNavigatorDeleteItem});
+            this.danhmucBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.danhmucBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.danhmucBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.danhmucBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.danhmucBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.danhmucBindingNavigator.Name = "danhmucBindingNavigator";
+            this.danhmucBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.danhmucBindingNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.danhmucBindingNavigator.Size = new System.Drawing.Size(1236, 27);
+            this.danhmucBindingNavigator.TabIndex = 0;
+            this.danhmucBindingNavigator.Text = "bindingNavigator1";
             // 
-            // textBox_TenDanhMuc
+            // bindingNavigatorAddNewItem
             // 
-            this.textBox_TenDanhMuc.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox_TenDanhMuc.DefaultText = "";
-            this.textBox_TenDanhMuc.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBox_TenDanhMuc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBox_TenDanhMuc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_TenDanhMuc.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_TenDanhMuc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_TenDanhMuc.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textBox_TenDanhMuc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_TenDanhMuc.Location = new System.Drawing.Point(0, 127);
-            this.textBox_TenDanhMuc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox_TenDanhMuc.Name = "textBox_TenDanhMuc";
-            this.textBox_TenDanhMuc.PasswordChar = '\0';
-            this.textBox_TenDanhMuc.PlaceholderText = "";
-            this.textBox_TenDanhMuc.SelectedText = "";
-            this.textBox_TenDanhMuc.Size = new System.Drawing.Size(579, 39);
-            this.textBox_TenDanhMuc.TabIndex = 3;
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
-            // label_TenDanhMuc
+            // bindingNavigatorDeleteItem
             // 
-            this.label_TenDanhMuc.AutoSize = true;
-            this.label_TenDanhMuc.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_TenDanhMuc.Location = new System.Drawing.Point(4, 107);
-            this.label_TenDanhMuc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_TenDanhMuc.Name = "label_TenDanhMuc";
-            this.label_TenDanhMuc.Size = new System.Drawing.Size(124, 17);
-            this.label_TenDanhMuc.TabIndex = 1;
-            this.label_TenDanhMuc.Text = "Tên Danh Mục:";
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
-            // label_MaDanhMuc
+            // danhmucBindingNavigatorSaveItem
             // 
-            this.label_MaDanhMuc.AutoSize = true;
-            this.label_MaDanhMuc.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_MaDanhMuc.Location = new System.Drawing.Point(4, 32);
-            this.label_MaDanhMuc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_MaDanhMuc.Name = "label_MaDanhMuc";
-            this.label_MaDanhMuc.Size = new System.Drawing.Size(117, 17);
-            this.label_MaDanhMuc.TabIndex = 0;
-            this.label_MaDanhMuc.Text = "Mã Danh Mục:";
+            this.danhmucBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.danhmucBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("danhmucBindingNavigatorSaveItem.Image")));
+            this.danhmucBindingNavigatorSaveItem.Name = "danhmucBindingNavigatorSaveItem";
+            this.danhmucBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
+            this.danhmucBindingNavigatorSaveItem.Text = "Save Data";
+            this.danhmucBindingNavigatorSaveItem.Click += new System.EventHandler(this.danhmucBindingNavigatorSaveItem_Click);
             // 
-            // btn_save
+            // danhmucDataGridView
             // 
-            this.btn_save.BackColor = System.Drawing.Color.Transparent;
-            this.btn_save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_save.FillColor = System.Drawing.Color.Teal;
-            this.btn_save.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.ForeColor = System.Drawing.Color.White;
-            this.btn_save.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.Image")));
-            this.btn_save.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_save.Location = new System.Drawing.Point(231, 191);
-            this.btn_save.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(131, 41);
-            this.btn_save.TabIndex = 8;
-            this.btn_save.Text = "SAVE";
-            this.btn_save.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.danhmucDataGridView.AllowUserToOrderColumns = true;
+            this.danhmucDataGridView.AutoGenerateColumns = false;
+            this.danhmucDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.danhmucDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.danhmucDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.danhmucDataGridView.DataSource = this.danhmucBindingSource;
+            this.danhmucDataGridView.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.danhmucDataGridView.Location = new System.Drawing.Point(25, 55);
+            this.danhmucDataGridView.Name = "danhmucDataGridView";
+            this.danhmucDataGridView.RowHeadersWidth = 51;
+            this.danhmucDataGridView.RowTemplate.Height = 24;
+            this.danhmucDataGridView.Size = new System.Drawing.Size(422, 222);
+            this.danhmucDataGridView.TabIndex = 1;
             // 
-            // btn_delete
+            // dataGridViewTextBoxColumn1
             // 
-            this.btn_delete.BackColor = System.Drawing.Color.Transparent;
-            this.btn_delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_delete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_delete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_delete.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.ForeColor = System.Drawing.Color.White;
-            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
-            this.btn_delete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_delete.Location = new System.Drawing.Point(1064, 30);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(139, 41);
-            this.btn_delete.TabIndex = 22;
-            this.btn_delete.Text = "DELETE";
-            this.btn_delete.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaDanhMuc";
+            this.dataGridViewTextBoxColumn1.HeaderText = "MaDanhMuc";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
-            // btn_update
+            // dataGridViewTextBoxColumn2
             // 
-            this.btn_update.BackColor = System.Drawing.Color.Transparent;
-            this.btn_update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_update.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_update.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_update.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_update.FillColor = System.Drawing.Color.Teal;
-            this.btn_update.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.ForeColor = System.Drawing.Color.White;
-            this.btn_update.Image = ((System.Drawing.Image)(resources.GetObject("btn_update.Image")));
-            this.btn_update.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_update.Location = new System.Drawing.Point(854, 30);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(139, 41);
-            this.btn_update.TabIndex = 21;
-            this.btn_update.Text = "UPDATE";
-            this.btn_update.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TenDanhMuc";
+            this.dataGridViewTextBoxColumn2.HeaderText = "TenDanhMuc";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
-            // btn_create
+            // maDanhMucLabel
             // 
-            this.btn_create.BackColor = System.Drawing.Color.Transparent;
-            this.btn_create.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_create.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_create.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_create.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_create.FillColor = System.Drawing.Color.Teal;
-            this.btn_create.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_create.ForeColor = System.Drawing.Color.White;
-            this.btn_create.Image = ((System.Drawing.Image)(resources.GetObject("btn_create.Image")));
-            this.btn_create.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_create.Location = new System.Drawing.Point(624, 30);
-            this.btn_create.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_create.Name = "btn_create";
-            this.btn_create.Size = new System.Drawing.Size(139, 41);
-            this.btn_create.TabIndex = 20;
-            this.btn_create.Text = "CREATE";
-            this.btn_create.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            maDanhMucLabel.AutoSize = true;
+            maDanhMucLabel.Location = new System.Drawing.Point(12, 75);
+            maDanhMucLabel.Name = "maDanhMucLabel";
+            maDanhMucLabel.Size = new System.Drawing.Size(104, 20);
+            maDanhMucLabel.TabIndex = 2;
+            maDanhMucLabel.Text = "Ma Danh Muc:";
+            // 
+            // maDanhMucTextBox
+            // 
+            this.maDanhMucTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.danhmucBindingSource, "MaDanhMuc", true));
+            this.maDanhMucTextBox.Enabled = false;
+            this.maDanhMucTextBox.Location = new System.Drawing.Point(145, 72);
+            this.maDanhMucTextBox.Name = "maDanhMucTextBox";
+            this.maDanhMucTextBox.Size = new System.Drawing.Size(169, 27);
+            this.maDanhMucTextBox.TabIndex = 3;
+            // 
+            // tenDanhMucLabel
+            // 
+            tenDanhMucLabel.AutoSize = true;
+            tenDanhMucLabel.Location = new System.Drawing.Point(12, 103);
+            tenDanhMucLabel.Name = "tenDanhMucLabel";
+            tenDanhMucLabel.Size = new System.Drawing.Size(106, 20);
+            tenDanhMucLabel.TabIndex = 4;
+            tenDanhMucLabel.Text = "Ten Danh Muc:";
+            // 
+            // tenDanhMucTextBox
+            // 
+            this.tenDanhMucTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.danhmucBindingSource, "TenDanhMuc", true));
+            this.tenDanhMucTextBox.Location = new System.Drawing.Point(145, 100);
+            this.tenDanhMucTextBox.Name = "tenDanhMucTextBox";
+            this.tenDanhMucTextBox.Size = new System.Drawing.Size(169, 27);
+            this.tenDanhMucTextBox.TabIndex = 5;
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // guna2GroupBox1
+            // 
+            this.guna2GroupBox1.Controls.Add(maDanhMucLabel);
+            this.guna2GroupBox1.Controls.Add(this.tenDanhMucTextBox);
+            this.guna2GroupBox1.Controls.Add(this.maDanhMucTextBox);
+            this.guna2GroupBox1.Controls.Add(tenDanhMucLabel);
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox1.Location = new System.Drawing.Point(25, 311);
+            this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.Size = new System.Drawing.Size(422, 200);
+            this.guna2GroupBox1.TabIndex = 6;
+            this.guna2GroupBox1.Text = "Quản lý danh mục";
             // 
             // FormCategoryType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1236, 616);
-            this.Controls.Add(this.textBox_Search);
-            this.Controls.Add(this.guna2ShadowPanel1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btn_delete);
-            this.Controls.Add(this.btn_update);
-            this.Controls.Add(this.btn_create);
+            this.Controls.Add(this.guna2GroupBox1);
+            this.Controls.Add(this.danhmucDataGridView);
+            this.Controls.Add(this.danhmucBindingNavigator);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCategoryType";
             this.Text = "FormCategoryType";
-            this.guna2ShadowPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView_Data)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Load += new System.EventHandler(this.FormCategoryType_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.sHOP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.danhmucBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.danhmucBindingNavigator)).EndInit();
+            this.danhmucBindingNavigator.ResumeLayout(false);
+            this.danhmucBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.danhmucDataGridView)).EndInit();
+            this.guna2GroupBox1.ResumeLayout(false);
+            this.guna2GroupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2TextBox textBox_Search;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private Guna.UI2.WinForms.Guna2DataGridView DataGridView_Data;
-        private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2TextBox textBox_MaDanhMuc;
-        private Guna.UI2.WinForms.Guna2TextBox textBox_TenDanhMuc;
-        private System.Windows.Forms.Label label_TenDanhMuc;
-        private System.Windows.Forms.Label label_MaDanhMuc;
-        private Guna.UI2.WinForms.Guna2Button btn_save;
-        private Guna.UI2.WinForms.Guna2Button btn_delete;
-        private Guna.UI2.WinForms.Guna2Button btn_update;
-        private Guna.UI2.WinForms.Guna2Button btn_create;
+        private SHOP sHOP;
+        private System.Windows.Forms.BindingSource danhmucBindingSource;
+        private SHOPTableAdapters.danhmucTableAdapter danhmucTableAdapter;
+        private SHOPTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator danhmucBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton danhmucBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView danhmucDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.TextBox maDanhMucTextBox;
+        private System.Windows.Forms.TextBox tenDanhMucTextBox;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
     }
 }

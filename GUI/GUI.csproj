@@ -179,6 +179,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLSHOPDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SHOP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SHOP.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CategoryGUI\FormCategoryType.resx">
       <DependentUpon>FormCategoryType.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +243,17 @@
     </None>
     <None Include="QLSHOPDataSet.xss">
       <DependentUpon>QLSHOPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SHOP.xsc">
+      <DependentUpon>SHOP.xsd</DependentUpon>
+    </None>
+    <None Include="SHOP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SHOP.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SHOP.xss">
+      <DependentUpon>SHOP.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

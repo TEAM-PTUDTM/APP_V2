@@ -16,5 +16,25 @@ namespace GUI.CategoryGUI
         {
             InitializeComponent();
         }
+
+        private void kichthuocBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.kichthuocBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.sHOP);
+
+        }
+
+        private void FormCategory_Color_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'sHOP.kichthuoc' table. You can move, or remove it, as needed.
+            this.kichthuocTableAdapter.Fill(this.sHOP.kichthuoc);
+
+        }
+
+        private void maKichThuocLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

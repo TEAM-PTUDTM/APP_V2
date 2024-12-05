@@ -28,310 +28,373 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label maMauLabel;
+            System.Windows.Forms.Label hEXCODELabel;
+            System.Windows.Forms.Label tenMauLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCategory_Size));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.textBox_Search = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.DataGridView_Size = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox_MaSize = new Guna.UI2.WinForms.Guna2TextBox();
-            this.textBox_TenSize = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label_TenSize = new System.Windows.Forms.Label();
-            this.label_MaSize = new System.Windows.Forms.Label();
-            this.btn_save = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_delete = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_update = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_create = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ShadowPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView_Size)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.sHOP = new GUI.SHOP();
+            this.mausacBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mausacTableAdapter = new GUI.SHOPTableAdapters.mausacTableAdapter();
+            this.tableAdapterManager = new GUI.SHOPTableAdapters.TableAdapterManager();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.maMauTextBox = new System.Windows.Forms.TextBox();
+            this.hEXCODETextBox = new System.Windows.Forms.TextBox();
+            this.tenMauTextBox = new System.Windows.Forms.TextBox();
+            this.mausacDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mausacBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.mausacBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            maMauLabel = new System.Windows.Forms.Label();
+            hEXCODELabel = new System.Windows.Forms.Label();
+            tenMauLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.sHOP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mausacBindingSource)).BeginInit();
+            this.guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mausacDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mausacBindingNavigator)).BeginInit();
+            this.mausacBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox_Search
+            // sHOP
             // 
-            this.textBox_Search.Animated = true;
-            this.textBox_Search.AutoRoundedCorners = true;
-            this.textBox_Search.BorderColor = System.Drawing.Color.Red;
-            this.textBox_Search.BorderRadius = 18;
-            this.textBox_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox_Search.DefaultText = "";
-            this.textBox_Search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBox_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBox_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_Search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textBox_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_Search.IconRight = ((System.Drawing.Image)(resources.GetObject("textBox_Search.IconRight")));
-            this.textBox_Search.Location = new System.Drawing.Point(23, 26);
-            this.textBox_Search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox_Search.Name = "textBox_Search";
-            this.textBox_Search.PasswordChar = '\0';
-            this.textBox_Search.PlaceholderText = "";
-            this.textBox_Search.SelectedText = "";
-            this.textBox_Search.ShadowDecoration.BorderRadius = 30;
-            this.textBox_Search.ShadowDecoration.Color = System.Drawing.Color.IndianRed;
-            this.textBox_Search.Size = new System.Drawing.Size(568, 39);
-            this.textBox_Search.TabIndex = 25;
+            this.sHOP.DataSetName = "SHOP";
+            this.sHOP.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // guna2ShadowPanel1
+            // mausacBindingSource
             // 
-            this.guna2ShadowPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.guna2ShadowPanel1.Controls.Add(this.DataGridView_Size);
-            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(23, 97);
-            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(568, 489);
-            this.guna2ShadowPanel1.TabIndex = 24;
+            this.mausacBindingSource.DataMember = "mausac";
+            this.mausacBindingSource.DataSource = this.sHOP;
             // 
-            // DataGridView_Size
+            // mausacTableAdapter
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.DataGridView_Size.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView_Size.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridView_Size.ColumnHeadersHeight = 40;
-            this.DataGridView_Size.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridView_Size.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DataGridView_Size.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView_Size.Location = new System.Drawing.Point(4, 4);
-            this.DataGridView_Size.Margin = new System.Windows.Forms.Padding(4);
-            this.DataGridView_Size.Name = "DataGridView_Size";
-            this.DataGridView_Size.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DataGridView_Size.RowHeadersVisible = false;
-            this.DataGridView_Size.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
-            this.DataGridView_Size.Size = new System.Drawing.Size(560, 481);
-            this.DataGridView_Size.TabIndex = 0;
-            this.DataGridView_Size.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.DataGridView_Size.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.DataGridView_Size.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.DataGridView_Size.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.DataGridView_Size.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.DataGridView_Size.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.DataGridView_Size.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView_Size.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.DataGridView_Size.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DataGridView_Size.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.DataGridView_Size.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DataGridView_Size.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.DataGridView_Size.ThemeStyle.HeaderStyle.Height = 40;
-            this.DataGridView_Size.ThemeStyle.ReadOnly = false;
-            this.DataGridView_Size.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.DataGridView_Size.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DataGridView_Size.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.DataGridView_Size.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.DataGridView_Size.ThemeStyle.RowsStyle.Height = 22;
-            this.DataGridView_Size.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView_Size.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.mausacTableAdapter.ClearBeforeFill = true;
             // 
-            // panel1
+            // tableAdapterManager
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.textBox_MaSize);
-            this.panel1.Controls.Add(this.textBox_TenSize);
-            this.panel1.Controls.Add(this.label_TenSize);
-            this.panel1.Controls.Add(this.label_MaSize);
-            this.panel1.Controls.Add(this.btn_save);
-            this.panel1.Location = new System.Drawing.Point(634, 97);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(579, 489);
-            this.panel1.TabIndex = 23;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.cache_locksTableAdapter = null;
+            this.tableAdapterManager.cacheTableAdapter = null;
+            this.tableAdapterManager.chitietdonhangTableAdapter = null;
+            this.tableAdapterManager.chitietsanphamTableAdapter = null;
+            this.tableAdapterManager.danhmucTableAdapter = null;
+            this.tableAdapterManager.donhangTableAdapter = null;
+            this.tableAdapterManager.failed_jobsTableAdapter = null;
+            this.tableAdapterManager.feedbackTableAdapter = null;
+            this.tableAdapterManager.giohangTableAdapter = null;
+            this.tableAdapterManager.hinhanhTableAdapter = null;
+            this.tableAdapterManager.job_batchesTableAdapter = null;
+            this.tableAdapterManager.jobsTableAdapter = null;
+            this.tableAdapterManager.khachhangTableAdapter = null;
+            this.tableAdapterManager.kichthuocTableAdapter = null;
+            this.tableAdapterManager.mausacTableAdapter = this.mausacTableAdapter;
+            this.tableAdapterManager.migrationsTableAdapter = null;
+            this.tableAdapterManager.password_reset_tokensTableAdapter = null;
+            this.tableAdapterManager.sanphamTableAdapter = null;
+            this.tableAdapterManager.sessionsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = GUI.SHOPTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usersTableAdapter = null;
+            this.tableAdapterManager.voucher_khachhangTableAdapter = null;
+            this.tableAdapterManager.voucherTableAdapter = null;
             // 
-            // textBox_MaSize
+            // guna2GroupBox1
             // 
-            this.textBox_MaSize.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox_MaSize.DefaultText = "";
-            this.textBox_MaSize.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBox_MaSize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBox_MaSize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_MaSize.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_MaSize.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_MaSize.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textBox_MaSize.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_MaSize.Location = new System.Drawing.Point(0, 52);
-            this.textBox_MaSize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox_MaSize.Name = "textBox_MaSize";
-            this.textBox_MaSize.PasswordChar = '\0';
-            this.textBox_MaSize.PlaceholderText = "";
-            this.textBox_MaSize.SelectedText = "";
-            this.textBox_MaSize.Size = new System.Drawing.Size(579, 39);
-            this.textBox_MaSize.TabIndex = 4;
+            this.guna2GroupBox1.Controls.Add(this.maMauTextBox);
+            this.guna2GroupBox1.Controls.Add(maMauLabel);
+            this.guna2GroupBox1.Controls.Add(this.hEXCODETextBox);
+            this.guna2GroupBox1.Controls.Add(hEXCODELabel);
+            this.guna2GroupBox1.Controls.Add(tenMauLabel);
+            this.guna2GroupBox1.Controls.Add(this.tenMauTextBox);
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox1.Location = new System.Drawing.Point(0, 411);
+            this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.Size = new System.Drawing.Size(566, 180);
+            this.guna2GroupBox1.TabIndex = 11;
+            this.guna2GroupBox1.Text = "Quản lý màu sắc";
             // 
-            // textBox_TenSize
+            // maMauTextBox
             // 
-            this.textBox_TenSize.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox_TenSize.DefaultText = "";
-            this.textBox_TenSize.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBox_TenSize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBox_TenSize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_TenSize.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_TenSize.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_TenSize.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textBox_TenSize.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_TenSize.Location = new System.Drawing.Point(0, 127);
-            this.textBox_TenSize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox_TenSize.Name = "textBox_TenSize";
-            this.textBox_TenSize.PasswordChar = '\0';
-            this.textBox_TenSize.PlaceholderText = "";
-            this.textBox_TenSize.SelectedText = "";
-            this.textBox_TenSize.Size = new System.Drawing.Size(579, 39);
-            this.textBox_TenSize.TabIndex = 3;
+            this.maMauTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mausacBindingSource, "MaMau", true));
+            this.maMauTextBox.Location = new System.Drawing.Point(124, 58);
+            this.maMauTextBox.Name = "maMauTextBox";
+            this.maMauTextBox.Size = new System.Drawing.Size(173, 27);
+            this.maMauTextBox.TabIndex = 3;
             // 
-            // label_TenSize
+            // maMauLabel
             // 
-            this.label_TenSize.AutoSize = true;
-            this.label_TenSize.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_TenSize.Location = new System.Drawing.Point(4, 107);
-            this.label_TenSize.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_TenSize.Name = "label_TenSize";
-            this.label_TenSize.Size = new System.Drawing.Size(124, 17);
-            this.label_TenSize.TabIndex = 1;
-            this.label_TenSize.Text = "Tên Danh Mục:";
+            maMauLabel.AutoSize = true;
+            maMauLabel.Location = new System.Drawing.Point(9, 58);
+            maMauLabel.Name = "maMauLabel";
+            maMauLabel.Size = new System.Drawing.Size(66, 20);
+            maMauLabel.TabIndex = 2;
+            maMauLabel.Text = "Ma Mau:";
             // 
-            // label_MaSize
+            // hEXCODETextBox
             // 
-            this.label_MaSize.AutoSize = true;
-            this.label_MaSize.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_MaSize.Location = new System.Drawing.Point(4, 32);
-            this.label_MaSize.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_MaSize.Name = "label_MaSize";
-            this.label_MaSize.Size = new System.Drawing.Size(117, 17);
-            this.label_MaSize.TabIndex = 0;
-            this.label_MaSize.Text = "Mã Danh Mục:";
+            this.hEXCODETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mausacBindingSource, "HEXCODE", true));
+            this.hEXCODETextBox.Location = new System.Drawing.Point(124, 114);
+            this.hEXCODETextBox.Name = "hEXCODETextBox";
+            this.hEXCODETextBox.Size = new System.Drawing.Size(173, 27);
+            this.hEXCODETextBox.TabIndex = 7;
             // 
-            // btn_save
+            // hEXCODELabel
             // 
-            this.btn_save.BackColor = System.Drawing.Color.Transparent;
-            this.btn_save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_save.FillColor = System.Drawing.Color.Teal;
-            this.btn_save.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.ForeColor = System.Drawing.Color.White;
-            this.btn_save.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.Image")));
-            this.btn_save.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_save.Location = new System.Drawing.Point(231, 192);
-            this.btn_save.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(131, 41);
-            this.btn_save.TabIndex = 8;
-            this.btn_save.Text = "SAVE";
-            this.btn_save.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            hEXCODELabel.AutoSize = true;
+            hEXCODELabel.Location = new System.Drawing.Point(9, 114);
+            hEXCODELabel.Name = "hEXCODELabel";
+            hEXCODELabel.Size = new System.Drawing.Size(79, 20);
+            hEXCODELabel.TabIndex = 6;
+            hEXCODELabel.Text = "HEXCODE:";
             // 
-            // btn_delete
+            // tenMauLabel
             // 
-            this.btn_delete.BackColor = System.Drawing.Color.Transparent;
-            this.btn_delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_delete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_delete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_delete.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.ForeColor = System.Drawing.Color.White;
-            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
-            this.btn_delete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_delete.Location = new System.Drawing.Point(1074, 26);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(139, 41);
-            this.btn_delete.TabIndex = 22;
-            this.btn_delete.Text = "DELETE";
-            this.btn_delete.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            tenMauLabel.AutoSize = true;
+            tenMauLabel.Location = new System.Drawing.Point(9, 86);
+            tenMauLabel.Name = "tenMauLabel";
+            tenMauLabel.Size = new System.Drawing.Size(68, 20);
+            tenMauLabel.TabIndex = 4;
+            tenMauLabel.Text = "Ten Mau:";
             // 
-            // btn_update
+            // tenMauTextBox
             // 
-            this.btn_update.BackColor = System.Drawing.Color.Transparent;
-            this.btn_update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_update.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_update.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_update.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_update.FillColor = System.Drawing.Color.Teal;
-            this.btn_update.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.ForeColor = System.Drawing.Color.White;
-            this.btn_update.Image = ((System.Drawing.Image)(resources.GetObject("btn_update.Image")));
-            this.btn_update.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_update.Location = new System.Drawing.Point(864, 26);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(139, 41);
-            this.btn_update.TabIndex = 21;
-            this.btn_update.Text = "UPDATE";
-            this.btn_update.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tenMauTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mausacBindingSource, "TenMau", true));
+            this.tenMauTextBox.Location = new System.Drawing.Point(124, 86);
+            this.tenMauTextBox.Name = "tenMauTextBox";
+            this.tenMauTextBox.Size = new System.Drawing.Size(173, 27);
+            this.tenMauTextBox.TabIndex = 5;
             // 
-            // btn_create
+            // mausacDataGridView
             // 
-            this.btn_create.BackColor = System.Drawing.Color.Transparent;
-            this.btn_create.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_create.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_create.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_create.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_create.FillColor = System.Drawing.Color.Teal;
-            this.btn_create.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_create.ForeColor = System.Drawing.Color.White;
-            this.btn_create.Image = ((System.Drawing.Image)(resources.GetObject("btn_create.Image")));
-            this.btn_create.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_create.Location = new System.Drawing.Point(634, 26);
-            this.btn_create.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_create.Name = "btn_create";
-            this.btn_create.Size = new System.Drawing.Size(139, 41);
-            this.btn_create.TabIndex = 20;
-            this.btn_create.Text = "CREATE";
-            this.btn_create.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.mausacDataGridView.AutoGenerateColumns = false;
+            this.mausacDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.mausacDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mausacDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.mausacDataGridView.DataSource = this.mausacBindingSource;
+            this.mausacDataGridView.Location = new System.Drawing.Point(0, 75);
+            this.mausacDataGridView.Name = "mausacDataGridView";
+            this.mausacDataGridView.RowHeadersWidth = 51;
+            this.mausacDataGridView.RowTemplate.Height = 24;
+            this.mausacDataGridView.Size = new System.Drawing.Size(566, 315);
+            this.mausacDataGridView.TabIndex = 10;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaMau";
+            this.dataGridViewTextBoxColumn1.HeaderText = "MaMau";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TenMau";
+            this.dataGridViewTextBoxColumn2.HeaderText = "TenMau";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "HEXCODE";
+            this.dataGridViewTextBoxColumn3.HeaderText = "HEXCODE";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // mausacBindingNavigator
+            // 
+            this.mausacBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.mausacBindingNavigator.BindingSource = this.mausacBindingSource;
+            this.mausacBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.mausacBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.mausacBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.mausacBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.mausacBindingNavigatorSaveItem});
+            this.mausacBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.mausacBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.mausacBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.mausacBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.mausacBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.mausacBindingNavigator.Name = "mausacBindingNavigator";
+            this.mausacBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.mausacBindingNavigator.Size = new System.Drawing.Size(1250, 27);
+            this.mausacBindingNavigator.TabIndex = 9;
+            this.mausacBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // mausacBindingNavigatorSaveItem
+            // 
+            this.mausacBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.mausacBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("mausacBindingNavigatorSaveItem.Image")));
+            this.mausacBindingNavigatorSaveItem.Name = "mausacBindingNavigatorSaveItem";
+            this.mausacBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
+            this.mausacBindingNavigatorSaveItem.Text = "Save Data";
             // 
             // FormCategory_Size
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1250, 620);
-            this.Controls.Add(this.textBox_Search);
-            this.Controls.Add(this.guna2ShadowPanel1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btn_delete);
-            this.Controls.Add(this.btn_update);
-            this.Controls.Add(this.btn_create);
+            this.Controls.Add(this.guna2GroupBox1);
+            this.Controls.Add(this.mausacDataGridView);
+            this.Controls.Add(this.mausacBindingNavigator);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCategory_Size";
             this.Text = "FormCategory_Size";
-            this.guna2ShadowPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView_Size)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Load += new System.EventHandler(this.FormCategory_Size_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.sHOP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mausacBindingSource)).EndInit();
+            this.guna2GroupBox1.ResumeLayout(false);
+            this.guna2GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mausacDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mausacBindingNavigator)).EndInit();
+            this.mausacBindingNavigator.ResumeLayout(false);
+            this.mausacBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2TextBox textBox_Search;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private Guna.UI2.WinForms.Guna2DataGridView DataGridView_Size;
-        private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2TextBox textBox_MaSize;
-        private Guna.UI2.WinForms.Guna2TextBox textBox_TenSize;
-        private System.Windows.Forms.Label label_TenSize;
-        private System.Windows.Forms.Label label_MaSize;
-        private Guna.UI2.WinForms.Guna2Button btn_save;
-        private Guna.UI2.WinForms.Guna2Button btn_delete;
-        private Guna.UI2.WinForms.Guna2Button btn_update;
-        private Guna.UI2.WinForms.Guna2Button btn_create;
+        private SHOP sHOP;
+        private System.Windows.Forms.BindingSource mausacBindingSource;
+        private SHOPTableAdapters.mausacTableAdapter mausacTableAdapter;
+        private SHOPTableAdapters.TableAdapterManager tableAdapterManager;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private System.Windows.Forms.TextBox maMauTextBox;
+        private System.Windows.Forms.TextBox hEXCODETextBox;
+        private System.Windows.Forms.TextBox tenMauTextBox;
+        private System.Windows.Forms.DataGridView mausacDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.BindingNavigator mausacBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton mausacBindingNavigatorSaveItem;
     }
 }
