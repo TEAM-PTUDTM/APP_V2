@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="CategoryBLL.cs" />
     <Compile Include="ColorBLL.cs" />
+    <Compile Include="InvoiceBLL.cs" />
     <Compile Include="ProductBLL.cs" />
     <Compile Include="ProductImageBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

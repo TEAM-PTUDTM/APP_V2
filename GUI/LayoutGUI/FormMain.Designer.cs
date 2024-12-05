@@ -298,6 +298,7 @@
             this.guna2Button2.Text = "HÓA ĐƠN";
             this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button2.UseTransparentBackground = true;
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // btn_Category
             // 

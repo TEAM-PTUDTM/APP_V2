@@ -69,6 +69,33 @@
             this.mausacBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
+            // maMauLabel
+            // 
+            maMauLabel.AutoSize = true;
+            maMauLabel.Location = new System.Drawing.Point(9, 58);
+            maMauLabel.Name = "maMauLabel";
+            maMauLabel.Size = new System.Drawing.Size(66, 20);
+            maMauLabel.TabIndex = 2;
+            maMauLabel.Text = "Ma Mau:";
+            // 
+            // hEXCODELabel
+            // 
+            hEXCODELabel.AutoSize = true;
+            hEXCODELabel.Location = new System.Drawing.Point(9, 114);
+            hEXCODELabel.Name = "hEXCODELabel";
+            hEXCODELabel.Size = new System.Drawing.Size(79, 20);
+            hEXCODELabel.TabIndex = 6;
+            hEXCODELabel.Text = "HEXCODE:";
+            // 
+            // tenMauLabel
+            // 
+            tenMauLabel.AutoSize = true;
+            tenMauLabel.Location = new System.Drawing.Point(9, 86);
+            tenMauLabel.Name = "tenMauLabel";
+            tenMauLabel.Size = new System.Drawing.Size(68, 20);
+            tenMauLabel.TabIndex = 4;
+            tenMauLabel.Text = "Ten Mau:";
+            // 
             // sHOP
             // 
             this.sHOP.DataSetName = "SHOP";
@@ -134,15 +161,6 @@
             this.maMauTextBox.Size = new System.Drawing.Size(173, 27);
             this.maMauTextBox.TabIndex = 3;
             // 
-            // maMauLabel
-            // 
-            maMauLabel.AutoSize = true;
-            maMauLabel.Location = new System.Drawing.Point(9, 58);
-            maMauLabel.Name = "maMauLabel";
-            maMauLabel.Size = new System.Drawing.Size(66, 20);
-            maMauLabel.TabIndex = 2;
-            maMauLabel.Text = "Ma Mau:";
-            // 
             // hEXCODETextBox
             // 
             this.hEXCODETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mausacBindingSource, "HEXCODE", true));
@@ -150,24 +168,6 @@
             this.hEXCODETextBox.Name = "hEXCODETextBox";
             this.hEXCODETextBox.Size = new System.Drawing.Size(173, 27);
             this.hEXCODETextBox.TabIndex = 7;
-            // 
-            // hEXCODELabel
-            // 
-            hEXCODELabel.AutoSize = true;
-            hEXCODELabel.Location = new System.Drawing.Point(9, 114);
-            hEXCODELabel.Name = "hEXCODELabel";
-            hEXCODELabel.Size = new System.Drawing.Size(79, 20);
-            hEXCODELabel.TabIndex = 6;
-            hEXCODELabel.Text = "HEXCODE:";
-            // 
-            // tenMauLabel
-            // 
-            tenMauLabel.AutoSize = true;
-            tenMauLabel.Location = new System.Drawing.Point(9, 86);
-            tenMauLabel.Name = "tenMauLabel";
-            tenMauLabel.Size = new System.Drawing.Size(68, 20);
-            tenMauLabel.TabIndex = 4;
-            tenMauLabel.Text = "Ten Mau:";
             // 
             // tenMauTextBox
             // 

@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCategory_Color));
             System.Windows.Forms.Label maKichThuocLabel;
             System.Windows.Forms.Label tenKichThuocLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCategory_Color));
             this.sHOP = new GUI.SHOP();
             this.kichthuocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kichthuocTableAdapter = new GUI.SHOPTableAdapters.kichthuocTableAdapter();
             this.tableAdapterManager = new GUI.SHOPTableAdapters.TableAdapterManager();
             this.kichthuocBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.kichthuocBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.kichthuocDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +64,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.kichthuocDataGridView)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // maKichThuocLabel
+            // 
+            maKichThuocLabel.AutoSize = true;
+            maKichThuocLabel.Location = new System.Drawing.Point(14, 86);
+            maKichThuocLabel.Name = "maKichThuocLabel";
+            maKichThuocLabel.Size = new System.Drawing.Size(109, 20);
+            maKichThuocLabel.TabIndex = 2;
+            maKichThuocLabel.Text = "Ma Kich Thuoc:";
+            maKichThuocLabel.Click += new System.EventHandler(this.maKichThuocLabel_Click);
+            // 
+            // tenKichThuocLabel
+            // 
+            tenKichThuocLabel.AutoSize = true;
+            tenKichThuocLabel.Location = new System.Drawing.Point(14, 121);
+            tenKichThuocLabel.Name = "tenKichThuocLabel";
+            tenKichThuocLabel.Size = new System.Drawing.Size(111, 20);
+            tenKichThuocLabel.TabIndex = 4;
+            tenKichThuocLabel.Text = "Ten Kich Thuoc:";
             // 
             // sHOP
             // 
@@ -137,13 +156,38 @@
             this.kichthuocBindingNavigator.TabIndex = 0;
             this.kichthuocBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -152,34 +196,28 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 20);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -201,33 +239,15 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // kichthuocBindingNavigatorSaveItem
             // 
             this.kichthuocBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.kichthuocBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("kichthuocBindingNavigatorSaveItem.Image")));
             this.kichthuocBindingNavigatorSaveItem.Name = "kichthuocBindingNavigatorSaveItem";
-            this.kichthuocBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.kichthuocBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.kichthuocBindingNavigatorSaveItem.Text = "Save Data";
             this.kichthuocBindingNavigatorSaveItem.Click += new System.EventHandler(this.kichthuocBindingNavigatorSaveItem_Click);
             // 
@@ -264,16 +284,6 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 125;
             // 
-            // maKichThuocLabel
-            // 
-            maKichThuocLabel.AutoSize = true;
-            maKichThuocLabel.Location = new System.Drawing.Point(14, 86);
-            maKichThuocLabel.Name = "maKichThuocLabel";
-            maKichThuocLabel.Size = new System.Drawing.Size(109, 20);
-            maKichThuocLabel.TabIndex = 2;
-            maKichThuocLabel.Text = "Ma Kich Thuoc:";
-            maKichThuocLabel.Click += new System.EventHandler(this.maKichThuocLabel_Click);
-            // 
             // maKichThuocTextBox
             // 
             this.maKichThuocTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kichthuocBindingSource, "MaKichThuoc", true));
@@ -281,15 +291,6 @@
             this.maKichThuocTextBox.Name = "maKichThuocTextBox";
             this.maKichThuocTextBox.Size = new System.Drawing.Size(229, 27);
             this.maKichThuocTextBox.TabIndex = 3;
-            // 
-            // tenKichThuocLabel
-            // 
-            tenKichThuocLabel.AutoSize = true;
-            tenKichThuocLabel.Location = new System.Drawing.Point(14, 121);
-            tenKichThuocLabel.Name = "tenKichThuocLabel";
-            tenKichThuocLabel.Size = new System.Drawing.Size(111, 20);
-            tenKichThuocLabel.TabIndex = 4;
-            tenKichThuocLabel.Text = "Ten Kich Thuoc:";
             // 
             // tenKichThuocTextBox
             // 

@@ -1,4 +1,5 @@
-﻿using GUI.ProductGUI;
+﻿using GUI.Invoice_GUI;
+using GUI.ProductGUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -62,5 +63,23 @@ namespace GUI.LayoutGUI
         {
             this.Close();
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            LoadEmpInvoice();
+        }
+        private void LoadEmpInvoice()
+        {
+            if (this.panel_content.Controls.Count > 0)
+                this.panel_content.Controls[0].Dispose();
+            Form_Invoice Form = new Form_Invoice();
+            Form.TopLevel = false;
+            Form.FormBorderStyle = FormBorderStyle.None;
+            Form.Dock = DockStyle.Fill;
+            this.panel_content.Controls.Add(Form);
+            this.panel_content.Tag = Form;
+            Form.Show();
+        }
+
     }
 }
