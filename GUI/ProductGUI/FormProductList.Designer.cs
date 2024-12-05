@@ -346,7 +346,7 @@
             this.dgv_Product.RowHeadersVisible = false;
             this.dgv_Product.RowHeadersWidth = 51;
             this.dgv_Product.RowTemplate.Height = 24;
-            this.dgv_Product.Size = new System.Drawing.Size(1018, 389);
+            this.dgv_Product.Size = new System.Drawing.Size(1018, 370);
             this.dgv_Product.TabIndex = 31;
             this.dgv_Product.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_Product.ThemeStyle.AlternatingRowsStyle.Font = null;

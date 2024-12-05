@@ -113,7 +113,7 @@
             this.guna2Button8.Name = "guna2Button8";
             this.guna2Button8.Size = new System.Drawing.Size(216, 53);
             this.guna2Button8.TabIndex = 13;
-            this.guna2Button8.Text = "REPORTS";
+            this.guna2Button8.Text = "BÁO CÁO";
             this.guna2Button8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button8.UseTransparentBackground = true;
             // 
@@ -136,7 +136,7 @@
             this.guna2Button7.Name = "guna2Button7";
             this.guna2Button7.Size = new System.Drawing.Size(216, 53);
             this.guna2Button7.TabIndex = 12;
-            this.guna2Button7.Text = "VOUCHER";
+            this.guna2Button7.Text = "KHUYẾN MÃI";
             this.guna2Button7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button7.UseTransparentBackground = true;
             // 
@@ -180,9 +180,9 @@
             this.lable_Logout.Location = new System.Drawing.Point(80, 20);
             this.lable_Logout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lable_Logout.Name = "lable_Logout";
-            this.lable_Logout.Size = new System.Drawing.Size(78, 17);
+            this.lable_Logout.Size = new System.Drawing.Size(100, 17);
             this.lable_Logout.TabIndex = 4;
-            this.lable_Logout.Text = "LOG OUT";
+            this.lable_Logout.Text = "ĐĂNG XUẤT";
             // 
             // guna2Button6
             // 
@@ -226,7 +226,7 @@
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.Size = new System.Drawing.Size(216, 53);
             this.guna2Button5.TabIndex = 6;
-            this.guna2Button5.Text = "EMPLOYEES";
+            this.guna2Button5.Text = "NHÂN VIÊN";
             this.guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button5.UseTransparentBackground = true;
             // 
@@ -249,7 +249,7 @@
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(216, 53);
             this.guna2Button4.TabIndex = 5;
-            this.guna2Button4.Text = "USER";
+            this.guna2Button4.Text = "NGƯỜI DÙNG";
             this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button4.UseTransparentBackground = true;
             // 
@@ -272,7 +272,7 @@
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(216, 53);
             this.guna2Button3.TabIndex = 4;
-            this.guna2Button3.Text = "STORE";
+            this.guna2Button3.Text = "KHO";
             this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button3.UseTransparentBackground = true;
             // 
@@ -295,7 +295,7 @@
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(216, 53);
             this.guna2Button2.TabIndex = 3;
-            this.guna2Button2.Text = "INVOICE";
+            this.guna2Button2.Text = "HÓA ĐƠN";
             this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button2.UseTransparentBackground = true;
             // 
@@ -318,7 +318,7 @@
             this.btn_Category.Name = "btn_Category";
             this.btn_Category.Size = new System.Drawing.Size(216, 53);
             this.btn_Category.TabIndex = 2;
-            this.btn_Category.Text = "CATEGORY";
+            this.btn_Category.Text = "DANH MỤC";
             this.btn_Category.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Category.UseTransparentBackground = true;
             // 
@@ -341,7 +341,7 @@
             this.btn_Product.Name = "btn_Product";
             this.btn_Product.Size = new System.Drawing.Size(216, 53);
             this.btn_Product.TabIndex = 1;
-            this.btn_Product.Text = "PRODUCT";
+            this.btn_Product.Text = "SẢN PHẨM";
             this.btn_Product.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Product.UseTransparentBackground = true;
             // 
