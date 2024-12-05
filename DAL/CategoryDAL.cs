@@ -10,6 +10,8 @@ namespace DAL
     public class CategoryDAL
     {
         QLSHOPDataContext sql = new QLSHOPDataContext();
+
+       
         public List<danhmuc> getCategory()
         {
             return sql.danhmucs.Select(cate => cate).ToList<danhmuc>();

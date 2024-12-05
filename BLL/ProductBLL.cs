@@ -15,9 +15,20 @@ namespace BLL
         {
             return productDAL.getProduct();
         }
+
+        public List<sanpham> getProductByCategoryId(int categoryId)
+        {
+            return productDAL.getProductByCategoryId(categoryId);
+        }
+
         public List<chitietsanpham> GetChitietsanphams()
         {
             return productDAL.GetChitietsanphams();
+        }
+
+        public bool addProduct(sanpham sp)
+        {
+                return productDAL.addProduct(sp);
         }
 
         public bool deleteProduct(int id)
@@ -48,6 +59,21 @@ namespace BLL
                                  SoLuongTon = m.SoLuongTon
                              })
                              .ToList(); 
+        }
+
+        public bool AddProductDetail(chitietsanpham newDetail)
+        {
+            return productDAL.InsertChitietsanpham(newDetail);
+        }
+
+        public bool UpdateProductDetail(chitietsanpham updatedDetail)
+        {
+            return productDAL.UpdateChitietsanpham(updatedDetail);
+        }
+
+        public bool DeleteProductDetail(int maChiTiet)
+        {
+            return productDAL.DeleteChitietsanpham(maChiTiet);
         }
 
     }

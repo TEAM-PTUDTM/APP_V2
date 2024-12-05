@@ -23,6 +23,19 @@ namespace BLL
         {
             return ProductImageDAL.updateImageProduct(img);
         }
+        public bool addImageProduct(hinhanh img)
+        {
+            try
+            {
+                ProductImageDAL.addImageProduct(img);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public bool checkPrymaryID(int id)
         {
             var ProductImage = ProductImageDAL.findByIdImageProduct(id);

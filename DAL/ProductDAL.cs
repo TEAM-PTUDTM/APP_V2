@@ -13,6 +13,12 @@ namespace DAL
     public class ProductDAL
     {
         QLSHOPDataContext sql = new QLSHOPDataContext();
+
+        public List<sanpham> getProductByCategoryId(int categoryId)
+        {
+            return sql.sanphams.Where(pro => pro.MaDanhMuc == categoryId).ToList();
+        }
+
         public List<sanpham> getProduct()
         {
             return sql.sanphams.Select(pro => pro).ToList<sanpham>();
@@ -75,11 +81,73 @@ namespace DAL
         }
 
 
-        // hàm này sai hã
         public List<chitietsanpham> ShowProductDetail()
         {
             return sql.chitietsanphams.ToList();
         }
+
+        public bool InsertChitietsanpham(chitietsanpham newChitiet)
+        {
+            try
+            {
+                sql.chitietsanphams.InsertOnSubmit(newChitiet);
+                sql.SubmitChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Có lỗi khi thêm: {ex.Message}");
+                return false;
+            }
+        }
+        public bool UpdateChitietsanpham(chitietsanpham updatedChitiet)
+        {
+            try
+            {
+                var existingChitiet = sql.chitietsanphams.FirstOrDefault(ct => ct.MaChiTiet == updatedChitiet.MaChiTiet);
+
+                if (existingChitiet != null)
+                {
+                    existingChitiet.MaSP = updatedChitiet.MaSP;
+                    existingChitiet.SoLuongTon = updatedChitiet.SoLuongTon;
+                    existingChitiet.MaMau = updatedChitiet.MaMau;
+                    existingChitiet.MaKichThuoc = updatedChitiet.MaKichThuoc;
+
+                    sql.SubmitChanges(); // Lưu thay đổi
+                    return true;
+                }
+
+                return false; // Không tìm thấy bản ghi
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Có lỗi khi cập nhật: {ex.Message}");
+                return false;
+            }
+        }
+        public bool DeleteChitietsanpham(int maChiTiet)
+        {
+            try
+            {
+                // Tìm sản phẩm cần xóa
+                var existingChitiet = sql.chitietsanphams.FirstOrDefault(ct => ct.MaChiTiet == maChiTiet);
+
+                if (existingChitiet != null)
+                {
+                    sql.chitietsanphams.DeleteOnSubmit(existingChitiet); // Xóa khỏi context
+                    sql.SubmitChanges(); // Lưu thay đổi vào cơ sở dữ liệu
+                    return true;
+                }
+
+                return false; // Không tìm thấy bản ghi
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Có lỗi khi xóa: {ex.Message}");
+                return false;
+            }
+        }
+
     }
 }
 
