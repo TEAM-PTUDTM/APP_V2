@@ -130,6 +130,12 @@
     <Compile Include="CategoryGUI\FormCategory_Size.Designer.cs">
       <DependentUpon>FormCategory_Size.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invoice_GUI\Form_Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice_GUI\Form_Invoice.Designer.cs">
+      <DependentUpon>Form_Invoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="LayoutGUI\FormCategoryLayout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CategoryGUI\FormCategory_Size.resx">
       <DependentUpon>FormCategory_Size.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoice_GUI\Form_Invoice.resx">
+      <DependentUpon>Form_Invoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LayoutGUI\FormCategoryLayout.resx">
       <DependentUpon>FormCategoryLayout.cs</DependentUpon>
