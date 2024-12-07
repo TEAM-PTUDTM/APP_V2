@@ -246,6 +246,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SHOP.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Warehouse\FormWarehoues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse\FormWarehoues.Designer.cs">
+      <DependentUpon>FormWarehoues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\FormWarehouseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse\FormWarehouseList.Designer.cs">
+      <DependentUpon>FormWarehouseList.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CategoryGUI\FormCategoryType.resx">
       <DependentUpon>FormCategoryType.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,6 +300,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Warehouse\FormWarehoues.resx">
+      <DependentUpon>FormWarehoues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse\FormWarehouseList.resx">
+      <DependentUpon>FormWarehouseList.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

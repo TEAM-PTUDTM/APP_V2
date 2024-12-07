@@ -249,9 +249,10 @@
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(216, 53);
             this.guna2Button4.TabIndex = 5;
-            this.guna2Button4.Text = "NGƯỜI DÙNG";
+            this.guna2Button4.Text = "HÓA ĐƠN NHẬP";
             this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button4.UseTransparentBackground = true;
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button3
             // 
@@ -272,9 +273,10 @@
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(216, 53);
             this.guna2Button3.TabIndex = 4;
-            this.guna2Button3.Text = "KHO";
+            this.guna2Button3.Text = "NHẬP KHO";
             this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button3.UseTransparentBackground = true;
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button2
             // 

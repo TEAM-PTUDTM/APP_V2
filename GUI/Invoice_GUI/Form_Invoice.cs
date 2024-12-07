@@ -28,6 +28,9 @@ namespace GUI.Invoice_GUI
         {
             LoadInvoices();
             LoadCategory();
+
+            dgv_InvoiceDetail.ColumnHeadersHeight = 40;
+
         }
 
         private void LoadInvoices()
@@ -43,6 +46,9 @@ namespace GUI.Invoice_GUI
                 dgv_invoice.Columns[11].Visible = false;
                 dgv_invoice.Columns[12].Visible = false;
                 dgv_invoice.Columns[13].Visible = false;
+
+
+                
             }
             catch (Exception ex)
             {
@@ -226,11 +232,12 @@ namespace GUI.Invoice_GUI
             {
                 // Gọi BLL để lấy chi tiết hóa đơn
                 var invoiceDetails = invoiceBLL.getInvoiceDetailByIDInvoice(invoiceID);
-
+                
                 if (invoiceDetails != null && invoiceDetails.Any())
                 {
                     dgv_InvoiceDetail.DataSource = invoiceDetails;
-
+                    dgv_InvoiceDetail.Columns[5].Visible = false;
+                    dgv_InvoiceDetail.Columns[6].Visible = false;
                 }
                 else
                 {
@@ -242,7 +249,6 @@ namespace GUI.Invoice_GUI
             {
                 MessageBox.Show("Lỗi khi tải chi tiết hóa đơn: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
             
         }
 
@@ -313,7 +319,6 @@ namespace GUI.Invoice_GUI
         {
             try
             {
-                // Lấy dữ liệu đã lọc từ DataGridView
                 var filteredInvoices = dgv_invoice.DataSource as List<donhang>;
 
                 if (filteredInvoices == null || !filteredInvoices.Any())
@@ -322,19 +327,23 @@ namespace GUI.Invoice_GUI
                     return;
                 }
 
-                // Tạo workbook và worksheet mới
                 using (var workbook = new XLWorkbook())
                 {
                     var worksheet = workbook.Worksheets.Add("Invoices");
 
-                    // Thêm tiêu đề cột từ DataGridView (bao gồm cả cột ẩn)
                     for (int colIndex = 0; colIndex < dgv_invoice.Columns.Count; colIndex++)
                     {
-                        // Lấy tên cột bất kể cột có hiển thị hay không
-                        worksheet.Cell(1, colIndex + 1).Value = dgv_invoice.Columns[colIndex].HeaderText;
+                        var headerCell = worksheet.Cell(1, colIndex + 1);
+                        headerCell.Value = dgv_invoice.Columns[colIndex].HeaderText;
+
+                        headerCell.Style.Fill.SetBackgroundColor(XLColor.CornflowerBlue); 
+                        headerCell.Style.Font.Bold = true;
+                        headerCell.Style.Font.FontColor = XLColor.White; 
+                        headerCell.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                        headerCell.Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;
+                        headerCell.Style.Border.BottomBorder = XLBorderStyleValues.Thin; // Viền dưới
                     }
 
-                    // Thêm dữ liệu vào worksheet
                     for (int i = 0; i < filteredInvoices.Count; i++)
                     {
                         var invoice = filteredInvoices[i];
@@ -343,7 +352,6 @@ namespace GUI.Invoice_GUI
                             var columnName = dgv_invoice.Columns[colIndex].Name;
                             var value = invoice.GetType().GetProperty(columnName)?.GetValue(invoice, null);
 
-                            // Chuyển giá trị của 'value' thành kiểu dữ liệu tương thích với Excel
                             if (value != null)
                             {
                                 if (value is DateTime)
@@ -365,15 +373,18 @@ namespace GUI.Invoice_GUI
                             }
                             else
                             {
-                                worksheet.Cell(i + 2, colIndex + 1).Value = string.Empty; // Nếu giá trị là null thì gán ô trống
+                                worksheet.Cell(i + 2, colIndex + 1).Value = string.Empty; 
                             }
+
+                            worksheet.Cell(i + 2, colIndex + 1).Style.Border.TopBorder = XLBorderStyleValues.Thin;
+                            worksheet.Cell(i + 2, colIndex + 1).Style.Border.BottomBorder = XLBorderStyleValues.Thin;
+                            worksheet.Cell(i + 2, colIndex + 1).Style.Border.LeftBorder = XLBorderStyleValues.Thin;
+                            worksheet.Cell(i + 2, colIndex + 1).Style.Border.RightBorder = XLBorderStyleValues.Thin;
                         }
                     }
 
-                    // Định dạng cột cho dễ đọc
                     worksheet.Columns().AdjustToContents();
 
-                    // Lưu file Excel
                     SaveFileDialog saveFileDialog = new SaveFileDialog
                     {
                         Filter = "Excel Files|*.xlsx",
@@ -392,6 +403,7 @@ namespace GUI.Invoice_GUI
                 MessageBox.Show("Lỗi khi xuất file Excel: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         //private void btn_ExportToExcel_Click(object sender, EventArgs e)
         //{

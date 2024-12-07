@@ -121,7 +121,7 @@
             this.btn_UpdateInvoice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_UpdateInvoice.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_UpdateInvoice.ForeColor = System.Drawing.Color.White;
-            this.btn_UpdateInvoice.Location = new System.Drawing.Point(1087, 571);
+            this.btn_UpdateInvoice.Location = new System.Drawing.Point(1087, 681);
             this.btn_UpdateInvoice.Name = "btn_UpdateInvoice";
             this.btn_UpdateInvoice.Size = new System.Drawing.Size(163, 144);
             this.btn_UpdateInvoice.TabIndex = 29;
@@ -216,7 +216,7 @@
             this.dgv_invoice.RowHeadersVisible = false;
             this.dgv_invoice.RowHeadersWidth = 51;
             this.dgv_invoice.RowTemplate.Height = 24;
-            this.dgv_invoice.Size = new System.Drawing.Size(1246, 478);
+            this.dgv_invoice.Size = new System.Drawing.Size(1246, 570);
             this.dgv_invoice.TabIndex = 34;
             this.dgv_invoice.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_invoice.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -261,7 +261,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 583);
+            this.label1.Location = new System.Drawing.Point(27, 693);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 18);
             this.label1.TabIndex = 37;
@@ -279,7 +279,7 @@
             this.txtOrderID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOrderID.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtOrderID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOrderID.Location = new System.Drawing.Point(132, 571);
+            this.txtOrderID.Location = new System.Drawing.Point(132, 681);
             this.txtOrderID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOrderID.Name = "txtOrderID";
             this.txtOrderID.PasswordChar = '\0';
@@ -301,7 +301,7 @@
             this.txt_Phone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Phone.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_Phone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Phone.Location = new System.Drawing.Point(132, 609);
+            this.txt_Phone.Location = new System.Drawing.Point(132, 719);
             this.txt_Phone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_Phone.Name = "txt_Phone";
             this.txt_Phone.PasswordChar = '\0';
@@ -315,7 +315,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 621);
+            this.label2.Location = new System.Drawing.Point(27, 731);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 18);
             this.label2.TabIndex = 41;
@@ -325,7 +325,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(534, 583);
+            this.label3.Location = new System.Drawing.Point(534, 693);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 18);
             this.label3.TabIndex = 44;
@@ -335,7 +335,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(534, 621);
+            this.label4.Location = new System.Drawing.Point(534, 731);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(138, 18);
             this.label4.TabIndex = 46;
@@ -353,7 +353,7 @@
             this.txt_PriceShipp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_PriceShipp.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_PriceShipp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_PriceShipp.Location = new System.Drawing.Point(132, 647);
+            this.txt_PriceShipp.Location = new System.Drawing.Point(132, 757);
             this.txt_PriceShipp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_PriceShipp.Name = "txt_PriceShipp";
             this.txt_PriceShipp.PasswordChar = '\0';
@@ -367,7 +367,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(27, 659);
+            this.label5.Location = new System.Drawing.Point(27, 769);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 18);
             this.label5.TabIndex = 47;
@@ -385,7 +385,7 @@
             this.txt_AmoutPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_AmoutPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_AmoutPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_AmoutPrice.Location = new System.Drawing.Point(700, 647);
+            this.txt_AmoutPrice.Location = new System.Drawing.Point(700, 757);
             this.txt_AmoutPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_AmoutPrice.Name = "txt_AmoutPrice";
             this.txt_AmoutPrice.PasswordChar = '\0';
@@ -399,7 +399,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(595, 659);
+            this.label6.Location = new System.Drawing.Point(595, 769);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 18);
             this.label6.TabIndex = 49;
@@ -417,7 +417,7 @@
             this.txt_Voucher.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Voucher.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_Voucher.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Voucher.Location = new System.Drawing.Point(700, 685);
+            this.txt_Voucher.Location = new System.Drawing.Point(700, 795);
             this.txt_Voucher.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_Voucher.Name = "txt_Voucher";
             this.txt_Voucher.PasswordChar = '\0';
@@ -431,7 +431,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(595, 697);
+            this.label7.Location = new System.Drawing.Point(595, 807);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 18);
             this.label7.TabIndex = 51;
@@ -449,7 +449,7 @@
             this.txt_address.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_address.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_address.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_address.Location = new System.Drawing.Point(132, 685);
+            this.txt_address.Location = new System.Drawing.Point(132, 795);
             this.txt_address.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_address.Name = "txt_address";
             this.txt_address.PasswordChar = '\0';
@@ -463,7 +463,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(27, 697);
+            this.label8.Location = new System.Drawing.Point(27, 807);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 18);
             this.label8.TabIndex = 53;
@@ -472,7 +472,7 @@
             // cbb_Payment
             // 
             this.cbb_Payment.FormattingEnabled = true;
-            this.cbb_Payment.Location = new System.Drawing.Point(700, 571);
+            this.cbb_Payment.Location = new System.Drawing.Point(700, 681);
             this.cbb_Payment.Name = "cbb_Payment";
             this.cbb_Payment.Size = new System.Drawing.Size(367, 24);
             this.cbb_Payment.TabIndex = 55;
@@ -481,7 +481,7 @@
             // cbb_order
             // 
             this.cbb_order.FormattingEnabled = true;
-            this.cbb_order.Location = new System.Drawing.Point(700, 609);
+            this.cbb_order.Location = new System.Drawing.Point(700, 719);
             this.cbb_order.Name = "cbb_order";
             this.cbb_order.Size = new System.Drawing.Size(367, 24);
             this.cbb_order.TabIndex = 56;
@@ -514,7 +514,7 @@
             this.dgv_InvoiceDetail.RowHeadersVisible = false;
             this.dgv_InvoiceDetail.RowHeadersWidth = 51;
             this.dgv_InvoiceDetail.RowTemplate.Height = 24;
-            this.dgv_InvoiceDetail.Size = new System.Drawing.Size(378, 478);
+            this.dgv_InvoiceDetail.Size = new System.Drawing.Size(378, 570);
             this.dgv_InvoiceDetail.TabIndex = 57;
             this.dgv_InvoiceDetail.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_InvoiceDetail.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -543,7 +543,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1672, 764);
+            this.ClientSize = new System.Drawing.Size(1672, 888);
             this.Controls.Add(this.dgv_InvoiceDetail);
             this.Controls.Add(this.cbb_order);
             this.Controls.Add(this.cbb_Payment);

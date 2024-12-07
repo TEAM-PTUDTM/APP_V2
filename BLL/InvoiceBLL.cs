@@ -11,6 +11,8 @@ namespace BLL
     public class InvoiceBLL
     {
         private InvoiceDAL invoiceDAL = new InvoiceDAL();
+
+     
         public bool AddInvoice(donhang invoice)
         {
             if (invoice == null)

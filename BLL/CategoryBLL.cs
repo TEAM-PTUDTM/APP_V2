@@ -11,6 +11,11 @@ namespace BLL
     public class CategoryBLL
     {
         CategoryDAL categoryDAL = new CategoryDAL();
+
+        public List<NhaCungCap> getAll_NCC()
+        {
+            return categoryDAL.getAll_NCC();
+        }
         public List<danhmuc> getCategory()
         {
             return categoryDAL.getCategory();

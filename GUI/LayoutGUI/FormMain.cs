@@ -1,5 +1,6 @@
 ﻿using GUI.Invoice_GUI;
 using GUI.ProductGUI;
+using GUI.Warehouse;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -81,5 +82,41 @@ namespace GUI.LayoutGUI
             Form.Show();
         }
 
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            LoadWarehouse();
+        }
+
+        private void LoadWarehouse()
+        {
+            if (this.panel_content.Controls.Count > 0)
+                this.panel_content.Controls[0].Dispose();
+            FormWarehoues Form = new FormWarehoues();
+            Form.TopLevel = false;
+            Form.FormBorderStyle = FormBorderStyle.None;
+            Form.Dock = DockStyle.Fill;
+            this.panel_content.Controls.Add(Form);
+            this.panel_content.Tag = Form;
+            Form.Show();
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            LoadWarehouseList();
+            
+        }
+
+        private void LoadWarehouseList()
+        {
+            if (this.panel_content.Controls.Count > 0)
+                this.panel_content.Controls[0].Dispose();
+            FormWarehouseList Form = new FormWarehouseList();
+            Form.TopLevel = false;
+            Form.FormBorderStyle = FormBorderStyle.None;
+            Form.Dock = DockStyle.Fill;
+            this.panel_content.Controls.Add(Form);
+            this.panel_content.Tag = Form;
+            Form.Show();
+        }
     }
 }

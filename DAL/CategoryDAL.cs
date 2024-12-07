@@ -11,6 +11,9 @@ namespace DAL
     {
         QLSHOPDataContext sql = new QLSHOPDataContext();
 
+        public List<NhaCungCap> getAll_NCC() { 
+            return sql.NhaCungCaps.ToList();
+        }
        
         public List<danhmuc> getCategory()
         {
