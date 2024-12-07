@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
@@ -81,5 +82,42 @@ namespace BLL
 
             return invoiceDAL.ShowInvoicesByPaymentMethod(paymentMethod);
         }
+
+
+
+        //thống kê
+        public List<donhang> ShowInvoicesByDateRangeAndStatus(DateTime fromDate, DateTime toDate, string status)
+        {
+            // Kiểm tra điều kiện ngày hợp lệ
+            if (fromDate > toDate)
+            {
+                throw new ArgumentException("Ngày bắt đầu không thể lớn hơn ngày kết thúc");
+            }
+
+            // Lọc dữ liệu thông qua InvoiceDAL
+            return invoiceDAL.ShowInvoicesByDateRangeAndStatus(fromDate, toDate, status);
+        }
+
+        public List<donhang> getAllHoaDon()
+        {
+            var invoices = invoiceDAL.getAllInvoice();
+
+            // Sử dụng LINQ để chọn ra chỉ những trường cần thiết
+            var invoiceSummaries = from invoice in invoices
+                                   select new donhang
+                                   {
+                                       MaDonHang = invoice.MaDonHang,
+                                       MaKhachHang = invoice.MaKhachHang,
+                                       NgayDat = invoice.NgayDat,
+                                       TongGia = invoice.TongGia ?? 0,  // Giả sử TongGia là nullable, thay 0 nếu null
+                                       TrangThaiThanhToan = invoice.TrangThaiThanhToan
+                                   };
+
+            return invoiceSummaries.ToList();
+        }
+
+
+
+
     }
 }

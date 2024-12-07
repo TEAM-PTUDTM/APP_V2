@@ -533,6 +533,9 @@ namespace GUI.Invoice_GUI
 
         }
 
-      
+        private void guna2DateTimePicker_From_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

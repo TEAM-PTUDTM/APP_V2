@@ -140,6 +140,7 @@
             this.guna2DateTimePicker_From.Size = new System.Drawing.Size(225, 48);
             this.guna2DateTimePicker_From.TabIndex = 30;
             this.guna2DateTimePicker_From.Value = new System.DateTime(2024, 12, 5, 14, 8, 57, 719);
+            this.guna2DateTimePicker_From.ValueChanged += new System.EventHandler(this.guna2DateTimePicker_From_ValueChanged);
             // 
             // guna2DateTimePicker_To
             // 

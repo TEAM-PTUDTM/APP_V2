@@ -113,6 +113,51 @@ namespace DAL
                       .ToList();
         }
 
-        
+
+        // Phương thức lọc theo tháng và từ khóa tìm kiếm
+        // Phương thức lọc theo tháng và từ khóa tìm kiếm
+        public List<donhang> GetFilteredInvoices(int month, string searchKeyword)
+        {
+            try
+            {
+                return sql.donhangs
+                          .Where(dh => dh.TrangThaiThanhToan == "Ðã Thanh Toán" // Lọc theo trạng thái thanh toán
+                                      && dh.NgayDat.HasValue // Kiểm tra NgayDat có giá trị không
+                                      && dh.NgayDat.Value.Month == month // Lọc theo tháng
+                                      && (dh.MaDonHang.ToString().Contains(searchKeyword)
+                                           || dh.TrangThaiDonHang.Contains(searchKeyword)) // Lọc theo mã đơn hàng hoặc trạng thái đơn hàng
+                          )
+                          .ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return new List<donhang>(); // Trả về danh sách rỗng trong trường hợp có lỗi
+            }
+        }
+
+        //Thống kê
+        // Thống kê: Hiển thị đơn hàng theo khoảng thời gian và trạng thái thanh toán
+        public List<donhang> ShowInvoicesByDateRangeAndStatus(DateTime fromDate, DateTime toDate, string status)
+        {
+            try
+            {
+                // Truy vấn lọc các đơn hàng theo khoảng thời gian và trạng thái thanh toán
+                var query = sql.donhangs.Where(invoice =>
+                    invoice.NgayDat >= fromDate && invoice.NgayDat <= toDate &&
+                    (string.IsNullOrEmpty(status) || invoice.TrangThaiThanhToan.Contains(status))
+                ).ToList();
+
+                return query;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return new List<donhang>(); // Trả về danh sách rỗng nếu có lỗi
+            }
+        }
+
+
+
     }
 }
