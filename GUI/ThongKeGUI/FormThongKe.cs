@@ -15,6 +15,8 @@ using DocumentFormat.OpenXml.Spreadsheet;
 using System.Windows.Forms.DataVisualization.Charting;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System.Runtime.InteropServices.ComTypes;
+using System.IO;
+
 
 namespace GUI.ThongKeGUI
 {
@@ -319,6 +321,15 @@ namespace GUI.ThongKeGUI
                     // Định dạng cột cho dễ đọc
                     worksheet.Columns().AdjustToContents();
 
+                    // Lưu biểu đồ thành hình ảnh
+                    string chartImagePath = Path.Combine(Path.GetTempPath(), "chartThongKe.png");
+                    chartThongKe.SaveImage(chartImagePath, ChartImageFormat.Png);
+
+                    // Chèn biểu đồ vào Excel
+                    var picture = worksheet.AddPicture(chartImagePath)
+                                           .MoveTo(worksheet.Cell(filteredInvoices.Count + 4, 1)) // Đặt vị trí dưới dữ liệu
+                                           .Scale(0.7); // Tùy chỉnh kích thước biểu đồ
+
                     // Lưu file Excel
                     SaveFileDialog saveFileDialog = new SaveFileDialog
                     {
@@ -330,6 +341,12 @@ namespace GUI.ThongKeGUI
                     {
                         workbook.SaveAs(saveFileDialog.FileName);
                         MessageBox.Show("Dữ liệu đã được xuất thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    // Xóa file ảnh tạm (nếu cần)
+                    if (File.Exists(chartImagePath))
+                    {
+                        File.Delete(chartImagePath);
                     }
                 }
             }
