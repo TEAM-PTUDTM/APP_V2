@@ -63,14 +63,15 @@ namespace DAL
                     //existingInvoice.NgayDat = updatedInvoice.NgayDat;
                     //existingInvoice.NgayDuKienGiaoHang = updatedInvoice.NgayDuKienGiaoHang;
                     //existingInvoice.TongGia = updatedInvoice.TongGia;
-                   // existingInvoice.TongTienSauKhiGiamGia = updatedInvoice.TongTienSauKhiGiamGia;
+                    //existingInvoice.TongTienSauKhiGiamGia = updatedInvoice.TongTienSauKhiGiamGia;
                     //existingInvoice.PhiVanChuyen = updatedInvoice.PhiVanChuyen;
                     existingInvoice.TrangThaiThanhToan = updatedInvoice.TrangThaiThanhToan;
                     //existingInvoice.HinhThucThanhToan = updatedInvoice.HinhThucThanhToan;
                     existingInvoice.TrangThaiDonHang = updatedInvoice.TrangThaiDonHang;
-                   // existingInvoice.DiaChiGiaoHang = updatedInvoice.DiaChiGiaoHang;
+                    //existingInvoice.DiaChiGiaoHang = updatedInvoice.DiaChiGiaoHang;
                     //existingInvoice.MaVoucher = updatedInvoice.MaVoucher;
                     //existingInvoice.RecipientPhone = updatedInvoice.RecipientPhone;
+
                     sql.SubmitChanges();
                     return true;
                 }

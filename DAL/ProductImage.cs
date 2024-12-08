@@ -52,7 +52,7 @@ namespace DAL
             try
             {
                 var image = findByIdImageProduct(img.MaHinhAnh);
-                image.Hinhanh1 = img.Hinhanh1;
+                image.hinhanh1 = img.hinhanh1;
                 sql.SubmitChanges();
                 return true;
             }
