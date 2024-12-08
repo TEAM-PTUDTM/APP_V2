@@ -468,8 +468,6 @@ namespace GUI.ProductGUI
 
         }
 
-
-
         private void TxtMaSP_TextChanged(object sender, EventArgs e)
         {
 
