@@ -172,5 +172,10 @@ namespace GUI.LayoutGUI
             this.panel_content.Tag = Form;
             Form.Show();
         }
+
+        private void guna2Button5_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
