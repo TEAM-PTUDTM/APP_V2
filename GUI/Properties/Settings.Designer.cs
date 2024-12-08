@@ -16,7 +16,8 @@ namespace GUI.Properties {
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-        
+        internal bool isSave;
+
         public static Settings Default {
             get {
                 return defaultInstance;
@@ -44,5 +45,8 @@ namespace GUI.Properties {
                 return ((string)(this["QLSHOPConnectionString1"]));
             }
         }
+
+        public string email { get; internal set; }
+        public string password { get; internal set; }
     }
 }

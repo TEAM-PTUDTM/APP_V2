@@ -169,6 +169,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountGUI\FormAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountGUI\FormAccount.Designer.cs">
+      <DependentUpon>FormAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="CategoryGUI\FormCategoryType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,12 @@
     </Compile>
     <Compile Include="LayoutGUI\FormCategoryLayout.Designer.cs">
       <DependentUpon>FormCategoryLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutGUI\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LayoutGUI\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="LayoutGUI\FormMain.cs">
       <SubType>Form</SubType>
@@ -247,6 +259,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SHOP.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UserGUI\FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserGUI\FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Warehouse\FormWarehoues.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +277,9 @@
     <Compile Include="Warehouse\FormWarehouseList.Designer.cs">
       <DependentUpon>FormWarehouseList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AccountGUI\FormAccount.resx">
+      <DependentUpon>FormAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CategoryGUI\FormCategoryType.resx">
       <DependentUpon>FormCategoryType.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LayoutGUI\FormCategoryLayout.resx">
       <DependentUpon>FormCategoryLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayoutGUI\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LayoutGUI\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
@@ -301,6 +325,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserGUI\FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Warehouse\FormWarehoues.resx">
       <DependentUpon>FormWarehoues.cs</DependentUpon>
     </EmbeddedResource>

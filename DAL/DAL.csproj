@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="CategoryDAL.cs" />
     <Compile Include="ColorDAL.cs" />
+    <Compile Include="EmployeeDAL.cs" />
     <Compile Include="InvoiceDAL.cs" />
     <Compile Include="ProductDAL.cs" />
     <Compile Include="ProductImage.cs" />

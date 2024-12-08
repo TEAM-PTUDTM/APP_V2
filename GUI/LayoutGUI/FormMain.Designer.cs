@@ -198,12 +198,12 @@
             this.guna2Button6.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.Image")));
             this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button6.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Button6.Location = new System.Drawing.Point(0, 514);
+            this.guna2Button6.Location = new System.Drawing.Point(0, 453);
             this.guna2Button6.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.Size = new System.Drawing.Size(216, 53);
             this.guna2Button6.TabIndex = 7;
-            this.guna2Button6.Text = "POS";
+            this.guna2Button6.Text = "TÀI KHOẢN";
             this.guna2Button6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button6.UseTransparentBackground = true;
             // 
@@ -221,7 +221,7 @@
             this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
             this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button5.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Button5.Location = new System.Drawing.Point(0, 453);
+            this.guna2Button5.Location = new System.Drawing.Point(0, 514);
             this.guna2Button5.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.Size = new System.Drawing.Size(216, 53);
@@ -366,7 +366,6 @@
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMain";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.guna2Panel1.ResumeLayout(false);

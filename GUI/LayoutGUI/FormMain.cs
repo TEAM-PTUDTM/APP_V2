@@ -1,6 +1,8 @@
 ﻿using GUI.Invoice_GUI;
 using GUI.ProductGUI;
 using GUI.Warehouse;
+using GUI.UserGUI;
+using GUI.AccountGUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,17 +12,69 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace GUI.LayoutGUI
 {
     public partial class FormMain : Form
     {
-        public FormMain()
+        EmployeeBLL NVbll = new EmployeeBLL();
+        FormProductList proForm = new FormProductList();
+        FormCategoryLayout cateForm = new FormCategoryLayout();
+        Form_Invoice invoiceForm = new Form_Invoice();
+        FormWarehoues wareForm = new FormWarehoues();
+        FormWarehouseList wavelistForm = new FormWarehouseList();
+        FormAccount fAccount;
+        public FormMain(string email)
         {
             InitializeComponent();
             btn_close.Click += Btn_close_Click;
             btn_Product.Click += Btn_Product_Click;
             btn_Category.Click += Btn_Category_Click;
+            lable_Logout.Click += Lable_Logout_Click;
+            guna2Button5.Click += Guna2Button5_Click;
+            guna2Button6.Click += Guna2Button6_Click;
+            if (!NVbll.GetEmployeeRole(email))
+            {
+                guna2Button5.Visible = false;
+                guna2Button8.Visible = false;
+                btn_Product.Checked = true;
+            }
+            else
+            {
+                guna2Button8.Checked = true;
+            }
+            fAccount = new FormAccount(email);
+        }
+
+        private void Guna2Button6_Click(object sender, EventArgs e)
+        {
+            if (this.panel_content.Controls.Count > 0)
+                this.panel_content.Controls[0].Dispose();
+            fAccount.TopLevel = false;
+            fAccount.FormBorderStyle = FormBorderStyle.None;
+            fAccount.Dock = DockStyle.Fill;
+            this.panel_content.Controls.Add(fAccount);
+            this.panel_content.Tag = fAccount;
+            fAccount.Show();
+        }
+
+        private void Guna2Button5_Click(object sender, EventArgs e)
+        {
+            if (this.panel_content.Controls.Count > 0)
+                this.panel_content.Controls[0].Dispose();
+            FormUser Form = new FormUser();
+            Form.TopLevel = false;
+            Form.FormBorderStyle = FormBorderStyle.None;
+            Form.Dock = DockStyle.Fill;
+            this.panel_content.Controls.Add(Form);
+            this.panel_content.Tag = Form;
+            Form.Show();
+        }
+
+        private void Lable_Logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void Btn_Category_Click(object sender, EventArgs e)
