@@ -264,7 +264,7 @@
             this.chartThongKe.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartThongKe.Legends.Add(legend1);
-            this.chartThongKe.Location = new System.Drawing.Point(776, 84);
+            this.chartThongKe.Location = new System.Drawing.Point(761, 71);
             this.chartThongKe.Name = "chartThongKe";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
