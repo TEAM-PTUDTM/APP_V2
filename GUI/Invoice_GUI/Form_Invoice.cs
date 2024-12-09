@@ -76,7 +76,7 @@ namespace GUI.Invoice_GUI
             
             cbb_Payment.Items.Clear();
             cbb_Payment.Items.Add("Đã Thanh Toán");
-            cbb_Payment.Items.Add("Chưa thanh toán");
+            cbb_Payment.Items.Add("Chua thanh toán");
         }
 
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -134,14 +134,15 @@ namespace GUI.Invoice_GUI
                 {
                     MaDonHang = int.Parse(txtOrderID.Text),
                     //NgayDuKienGiaoHang = dtpNgayDuKien.Value,
-                    //TongTienSauKhiGiamGia = decimal.Parse(txtTongTienSauGiamGia.Text.Trim()),
-                    //PhiVanChuyen = decimal.Parse(txtPhiVanChuyen.Text.Trim()),
+                    //TongTienSauKhiGiamGia = double.Parse(txt_PriceShipp.Text.Trim()),
+                    //PhiVanChuyen = double.Parse(txt_PriceShipp.Text.Trim()),
                     TrangThaiThanhToan = cbb_Payment.SelectedItem.ToString(),
                     //HinhThucThanhToan = txtHinhThucThanhToan.Text.Trim(),
                     TrangThaiDonHang = cbb_order.SelectedItem.ToString(),
-                    //DiaChiGiaoHang = txtDiaChi.Text.Trim(),
-                    //MaVoucher = txtMaVoucher.Text.Trim(),
-                    //RecipientPhone = txtPhone.Text.Trim()
+                    //TrangThaiDonHang = "Đã huy",
+                    //DiaChiGiaoHang = txt_address.Text.Trim(),
+                    //MaVoucher = txt_Voucher.Text.Trim(),
+                    //RecipientPhone = txt_Phone.Text.Trim()
                 };
 
                 // Gọi phương thức Update từ BLL

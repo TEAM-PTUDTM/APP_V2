@@ -56,7 +56,7 @@ namespace GUI.ProductGUI
                 UC_Image imageItem = new UC_Image()
                 {
                     MaHinhAnh = img.MaHinhAnh,
-                    UrlImage = img.Hinhanh1,
+                    UrlImage = img.hinhanh1,
                 };
 
                 imageItem.ImageDeleted += ShowImageProduct;
@@ -106,7 +106,7 @@ namespace GUI.ProductGUI
                 hinhanh product = new hinhanh
                 {
                     MaSp = _MaSP,
-                    Hinhanh1 = imageUrl,
+                    hinhanh1 = imageUrl,
                 };
 
                 ProductImage_BLL.addImageProduct(product);

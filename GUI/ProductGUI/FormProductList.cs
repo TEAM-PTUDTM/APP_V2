@@ -118,7 +118,7 @@ namespace GUI.ProductGUI
                     txt_moTa.Text = mota;
                     txt_gia.Text = gia;
                     Txt_giamGia.Text = giamgia;
-                    cbb_DanhMuc.Text = danhmuc;
+                    cbb_DanhMuc.Text = danhmuc; 
                     txt_MaSP.Text = masp;
 
                     if (!string.IsNullOrEmpty(trinhTrang) && cbb_TrinhTrang.Items.Contains(trinhTrang))
@@ -392,20 +392,44 @@ namespace GUI.ProductGUI
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin sản phẩm.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            double gia, giamGia;
+            int maDanhMuc;
+
+            if (!double.TryParse(txt_gia.Text, out gia))
+            {
+                MessageBox.Show("Giá sản phẩm không hợp lệ. Vui lòng nhập số.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!double.TryParse(Txt_giamGia.Text, out giamGia))
+            {
+                MessageBox.Show("Phần trăm giảm giá không hợp lệ. Vui lòng nhập số.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!int.TryParse(cbb_DanhMuc.SelectedValue?.ToString(), out maDanhMuc))
+            {
+                MessageBox.Show("Mã danh mục không hợp lệ. Vui lòng chọn một giá trị hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             try
             {
+
+                
+
                 sanpham newProduct = new sanpham
                 {
                     TenSP = Txt_TenSP.Text,
-                    Gia = double.Parse(txt_gia.Text),
-                    PhanTramGiamGia = double.Parse(Txt_giamGia.Text),
+                    Gia = gia,
+                    PhanTramGiamGia = giamGia,
                     MoTa = txt_moTa.Text,
-                    MaDanhMuc = int.Parse(cbb_DanhMuc.Text),
-                    TrinhTrang = cbb_TrinhTrang.SelectedItem.ToString()
+                    MaDanhMuc = maDanhMuc,
+                    TrinhTrang = cbb_TrinhTrang.SelectedItem?.ToString()
                 };
 
-                bool isSaved = productBLL.addProduct(newProduct); 
+                bool isSaved = productBLL.addProduct(newProduct);
+
 
                 if (isSaved)
                 {
