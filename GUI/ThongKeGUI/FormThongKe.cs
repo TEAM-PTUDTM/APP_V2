@@ -159,7 +159,6 @@ namespace GUI.ThongKeGUI
 
         private void btn_ResetFilter_Click(object sender, EventArgs e)
         {
-            textBox_Search.Clear(); // Xóa từ khóa tìm kiếm
             guna2ComboBox1.SelectedIndex = 0; // Chọn lại tháng mặc định (ví dụ tháng đầu tiên trong danh sách)
 
             LoadInvoices(); // Lấy lại tất cả hóa đơn
@@ -167,41 +166,7 @@ namespace GUI.ThongKeGUI
 
         private void textBox_Search_TextChanged(object sender, EventArgs e)
         {
-            string searchText = textBox_Search.Text.Trim();
-            string selectedStatus = guna2ComboBox1.SelectedItem?.ToString().Trim();
-
-            try
-            {
-                if (string.IsNullOrEmpty(searchText) && string.IsNullOrEmpty(selectedStatus))
-                {
-                    LoadInvoices();
-                    return;
-                }
-
-                if (dgv_thongke.DataSource is List<donhang> invoiceList)
-                {
-                    var filteredInvoices = invoiceList.Where(invoice =>
-                        (string.IsNullOrEmpty(selectedStatus) || invoice.TrangThaiThanhToan.Contains(selectedStatus)) &&
-                        (string.IsNullOrEmpty(searchText) ||
-                         (invoice.RecipientPhone != null && invoice.RecipientPhone.Contains(searchText)) ||
-                         (invoice.DiaChiGiaoHang != null && invoice.DiaChiGiaoHang.Contains(searchText))
-                        )
-                    ).ToList();
-
-                    dgv_thongke.DataSource = filteredInvoices;
-
-                    // Tính tổng giá trị của cột TongGia và hiển thị vào txt_AmoutPrice
-                    UpdateAmountPrice(filteredInvoices);
-                }
-                else
-                {
-                    MessageBox.Show("Dữ liệu không phải là List<donhang>.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi tìm kiếm hóa đơn: " + ex.Message);
-            }
+           
         }
 
         private void guna2DateTimePicker_To_ValueChanged(object sender, EventArgs e)
@@ -504,7 +469,7 @@ namespace GUI.ThongKeGUI
 
         private void btn_ResetFilter_Click_1(object sender, EventArgs e)
         {
-            textBox_Search.Clear(); // Xóa từ khóa tìm kiếm
+         
             guna2ComboBox1.SelectedIndex = 0; // Chọn lại tháng mặc định (ví dụ tháng đầu tiên trong danh sách)
 
             LoadInvoices(); // Lấy lại tất cả hóa đơn
