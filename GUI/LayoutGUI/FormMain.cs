@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using GUI.ThongKeGUI;
 
 namespace GUI.LayoutGUI
 {
@@ -34,17 +35,23 @@ namespace GUI.LayoutGUI
             lable_Logout.Click += Lable_Logout_Click;
             guna2Button5.Click += Guna2Button5_Click;
             guna2Button6.Click += Guna2Button6_Click;
+            btn_ThongKe.Click += Btn_ThongKe_Click;
             if (!NVbll.GetEmployeeRole(email))
             {
                 guna2Button5.Visible = false;
-                guna2Button8.Visible = false;
+                btn_ThongKe.Visible = false;
                 btn_Product.Checked = true;
             }
             else
             {
-                guna2Button8.Checked = true;
+                btn_ThongKe.Checked = true;
             }
             fAccount = new FormAccount(email);
+        }
+
+        private void Btn_ThongKe_Click(object sender, EventArgs e)
+        {
+            LoadThongKe();
         }
 
         private void Guna2Button6_Click(object sender, EventArgs e)
@@ -176,6 +183,23 @@ namespace GUI.LayoutGUI
         private void guna2Button5_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void LoadThongKe()
+        {
+
+            if (this.panel_content.Controls.Count > 0)
+                this.panel_content.Controls[0].Dispose();
+
+            // Thay Form_Invoice thành FormThongKe
+            FormThongKe form = new FormThongKe();
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+
+            this.panel_content.Controls.Add(form);
+            this.panel_content.Tag = form;
+            form.Show();
         }
     }
 }

@@ -32,7 +32,7 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_close = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_ThongKe = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -77,7 +77,7 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.Teal;
-            this.guna2Panel2.Controls.Add(this.guna2Button8);
+            this.guna2Panel2.Controls.Add(this.btn_ThongKe);
             this.guna2Panel2.Controls.Add(this.guna2Button7);
             this.guna2Panel2.Controls.Add(this.pictureBox11);
             this.guna2Panel2.Controls.Add(this.panel2);
@@ -94,28 +94,28 @@
             this.guna2Panel2.Size = new System.Drawing.Size(216, 919);
             this.guna2Panel2.TabIndex = 1;
             // 
-            // guna2Button8
+            // btn_ThongKe
             // 
-            this.guna2Button8.Animated = true;
-            this.guna2Button8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button8.FillColor = System.Drawing.Color.Teal;
-            this.guna2Button8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button8.ForeColor = System.Drawing.Color.White;
-            this.guna2Button8.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button8.Image")));
-            this.guna2Button8.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button8.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Button8.Location = new System.Drawing.Point(0, 636);
-            this.guna2Button8.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(216, 53);
-            this.guna2Button8.TabIndex = 13;
-            this.guna2Button8.Text = "BÁO CÁO";
-            this.guna2Button8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button8.UseTransparentBackground = true;
+            this.btn_ThongKe.Animated = true;
+            this.btn_ThongKe.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_ThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_ThongKe.FillColor = System.Drawing.Color.Teal;
+            this.btn_ThongKe.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btn_ThongKe.ForeColor = System.Drawing.Color.White;
+            this.btn_ThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThongKe.Image")));
+            this.btn_ThongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_ThongKe.ImageSize = new System.Drawing.Size(35, 35);
+            this.btn_ThongKe.Location = new System.Drawing.Point(0, 636);
+            this.btn_ThongKe.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_ThongKe.Name = "btn_ThongKe";
+            this.btn_ThongKe.Size = new System.Drawing.Size(216, 53);
+            this.btn_ThongKe.TabIndex = 13;
+            this.btn_ThongKe.Text = "BÁO CÁO";
+            this.btn_ThongKe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_ThongKe.UseTransparentBackground = true;
             // 
             // guna2Button7
             // 
@@ -397,7 +397,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button btn_Category;
         private Guna.UI2.WinForms.Guna2Button btn_Product;
-        private Guna.UI2.WinForms.Guna2Button guna2Button8;
+        private Guna.UI2.WinForms.Guna2Button btn_ThongKe;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
     }
 }
